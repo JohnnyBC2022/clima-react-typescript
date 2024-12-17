@@ -1,11 +1,15 @@
-
+import styles from './App.module.css'
 
 function App() {
   
 
   return (
     <>
-      <h1>Aplicación del Tiempo</h1>
+      <h1 className={styles.title}>Aplicación del Tiempo</h1>
+      <div className={styles.container}>
+        <p>1</p>
+        <p>2</p>
+      </div>
     </>
   )
 }

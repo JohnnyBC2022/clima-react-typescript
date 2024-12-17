@@ -1,0 +1,46 @@
+:root {
+  --white: #ededed;
+  --black: #2c2c2c;
+  --primary: #f59E0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--white);
+  font-size: 2rem;
+  position: relative;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body::before {
+  content: "";
+  background-image: url('/bg-clima.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
