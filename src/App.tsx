@@ -3,7 +3,7 @@ import Form from './components/Form/Form'
 import useWeather from './hooks/useWeather'
 
 function App() {
-  const {fetchWeather} = useWeather()
+  const {weather, fetchWeather} = useWeather()
 
   return (
     <>
