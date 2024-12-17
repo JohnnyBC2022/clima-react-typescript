@@ -2,7 +2,7 @@ import axios from "axios"
 import { z } from 'zod'
 //import {object, string, number, parse} from 'valibot';
 import { SearchType } from "../types"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
 // TYPE GUARD O ASSERTION: es mucho mejor que castear pero si es una API en la que tenemos que utilizar muchos objetos, no va a ser fácil de mantener
 // unknow en Typescript es un tipo que sirve para representar un valor cuyo tipo se desconoce
@@ -31,7 +31,7 @@ const Weather = z.object({
 })
 // En Zod aunque tengamos definido los types que hemos creado en nuestro hook, tenemos que crear un schema de este modo
 
-type Weather = z.infer<typeof Weather>
+export type Weather = z.infer<typeof Weather>
 
 // Valibot
 /* const WeatherSchema = object({
@@ -104,8 +104,11 @@ export default function useWeather() {
         }
     }
 
+    const hasWeatherData = useMemo(()=>weather.name,[weather])
+
     return {
         weather,
-        fetchWeather
+        fetchWeather,
+        hasWeatherData
     }
 }
