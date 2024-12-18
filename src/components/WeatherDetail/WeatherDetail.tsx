@@ -19,12 +19,10 @@ export default function WeatherDetail({ weather }: WeatherDetailProps) {
       </p>
       <div className={styles.temperatures}>
         <p>
-          Min:{" "}
-          <span>{formatTemperature(weather.main.temp_min)} &deg;C</span>
+          Min: <span>{formatTemperature(weather.main.temp_min)} &deg;C</span>
         </p>
         <p>
-          Max:{" "}
-          <span>{formatTemperature(weather.main.temp_max)} &deg;C</span>
+          Max: <span>{formatTemperature(weather.main.temp_max)} &deg;C</span>
         </p>
       </div>
     </div>

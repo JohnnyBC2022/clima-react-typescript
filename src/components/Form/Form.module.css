@@ -16,9 +16,9 @@
   border-radius: 1rem;
 }
 
-.form select option{
-    background-color: var(--black);
-    color: var(--white);
+.form select option {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .field ::placeholder {

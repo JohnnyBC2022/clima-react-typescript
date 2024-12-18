@@ -1,27 +1,29 @@
-.container{
-    background-color: var(--white);
-    color: var(--black);
-    border-radius: 1rem;
-    text-align: center;
-    padding: 1rem;
+.container {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
 }
 
-.current{
-    font-size: 6rem;
-    font-weight: 900;
-    margin: 0;
+.current {
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
 }
 
-.temperatures{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+.temperatures {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.temperatures p, .container:nth-child(2){
-    font-weight: 900;
+.temperatures p,
+.container:nth-child(2) {
+  font-weight: 900;
 }
 
-.temperatures span, .container:nth-child(2) span{
-    font-weight: 400;
+.temperatures span,
+.container:nth-child(2) span {
+  font-weight: 400;
 }

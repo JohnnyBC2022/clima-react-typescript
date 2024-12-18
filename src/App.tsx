@@ -6,14 +6,15 @@ import WeatherDetail from "./components/WeatherDetail/WeatherDetail";
 import useWeather from "./hooks/useWeather";
 
 function App() {
-  const { weather,loading,cityNotFound, fetchWeather, hasWeatherData } = useWeather();
+  const { weather, loading, cityNotFound, fetchWeather, hasWeatherData } =
+    useWeather();
 
   return (
     <>
       <h1 className={styles.title}>Aplicación del Tiempo</h1>
       <div className={styles.container}>
         <Form fetchWeather={fetchWeather} />
-        {loading && <Spinner/>}
+        {loading && <Spinner />}
         {hasWeatherData && <WeatherDetail weather={weather} />}
         {cityNotFound && <Alert>Ciudad No Encontrada</Alert>}
       </div>

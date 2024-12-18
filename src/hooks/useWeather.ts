@@ -73,7 +73,7 @@ export default function useWeather() {
             const { data } = await axios(geoUrl)
 
             // Comprobar si existe la ciudad
-            if(!data[0]){
+            if (!data[0]) {
                 setCityNotFound(true)
                 return
             }
